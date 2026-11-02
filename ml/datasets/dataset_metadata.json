@@ -1,0 +1,193 @@
+{
+  "dataset_name": "AGRISENSE Multimodal Agricultural Intelligence Dataset",
+  "version": "2.4.0",
+  "total_records": 2200,
+  "total_features": 17,
+  "target_variable": "crop",
+  "num_classes": 22,
+  "classes": [
+    "apple",
+    "banana",
+    "blackgram",
+    "chickpea",
+    "coconut",
+    "coffee",
+    "cotton",
+    "grapes",
+    "jute",
+    "kidneybeans",
+    "lentil",
+    "maize",
+    "mango",
+    "mothbeans",
+    "mungbean",
+    "muskmelon",
+    "orange",
+    "papaya",
+    "pigeonpeas",
+    "pomegranate",
+    "rice",
+    "watermelon"
+  ],
+  "provenance": [
+    {
+      "source": "ICAR (Indian Council of Agricultural Research)",
+      "type": "National Agricultural Research Benchmark",
+      "attributes": [
+        "Crop growth calendars",
+        "Soil suitability matrices",
+        "NPK requirements"
+      ]
+    },
+    {
+      "source": "FAOSTAT & Kaggle Agricultural Dataset",
+      "type": "Peer-Reviewed Agronomic Observation Repository",
+      "attributes": [
+        "N",
+        "P",
+        "K",
+        "temperature",
+        "humidity",
+        "ph",
+        "rainfall"
+      ]
+    },
+    {
+      "source": "NASA POWER Agro-Climatology API",
+      "type": "Global Meteorological Baseline",
+      "attributes": [
+        "Solar Radiation",
+        "Climatic extremes",
+        "Wind vectors"
+      ]
+    }
+  ],
+  "feature_summary": {
+    "N": {
+      "dtype": "float64",
+      "min": 0.0,
+      "max": 140.0,
+      "mean": 50.551818181818184,
+      "unique_values": 137
+    },
+    "P": {
+      "dtype": "float64",
+      "min": 5.0,
+      "max": 145.0,
+      "mean": 53.36272727272727,
+      "unique_values": 117
+    },
+    "K": {
+      "dtype": "float64",
+      "min": 5.0,
+      "max": 205.0,
+      "mean": 48.14909090909091,
+      "unique_values": 73
+    },
+    "temperature": {
+      "dtype": "float64",
+      "min": 8.83,
+      "max": 43.68,
+      "mean": 25.616136363636365,
+      "unique_values": 1254
+    },
+    "humidity": {
+      "dtype": "float64",
+      "min": 14.26,
+      "max": 99.98,
+      "mean": 71.48187727272727,
+      "unique_values": 1741
+    },
+    "ph": {
+      "dtype": "float64",
+      "min": 3.5,
+      "max": 9.94,
+      "mean": 6.469445454545455,
+      "unique_values": 370
+    },
+    "rainfall": {
+      "dtype": "float64",
+      "min": 20.21,
+      "max": 298.56,
+      "mean": 103.46369090909091,
+      "unique_values": 2036
+    },
+    "soil_moisture": {
+      "dtype": "float64",
+      "min": 21.69,
+      "max": 92.63,
+      "mean": 50.20855909090909,
+      "unique_values": 1747
+    },
+    "solar_radiation": {
+      "dtype": "float64",
+      "min": 4.27,
+      "max": 9.8,
+      "mean": 6.9411,
+      "unique_values": 452
+    },
+    "wind_speed": {
+      "dtype": "float64",
+      "min": 2.0,
+      "max": 12.2,
+      "mean": 6.9835318181818185,
+      "unique_values": 669
+    },
+    "heatwave_risk": {
+      "dtype": "float64",
+      "min": 0.0,
+      "max": 0.759,
+      "mean": 0.04323272727272727,
+      "unique_values": 256
+    },
+    "drought_risk": {
+      "dtype": "float64",
+      "min": 0.0,
+      "max": 0.988,
+      "mean": 0.4404590909090909,
+      "unique_values": 813
+    },
+    "flood_risk": {
+      "dtype": "float64",
+      "min": 0.007,
+      "max": 0.877,
+      "mean": 0.10172045454545453,
+      "unique_values": 409
+    },
+    "frost_risk": {
+      "dtype": "float64",
+      "min": 0.0,
+      "max": 0.849,
+      "mean": 0.056242272727272724,
+      "unique_values": 292
+    },
+    "soil_type": {
+      "dtype": "object",
+      "min": null,
+      "max": null,
+      "mean": null,
+      "unique_values": 13
+    },
+    "season": {
+      "dtype": "object",
+      "min": null,
+      "max": null,
+      "mean": null,
+      "unique_values": 4
+    },
+    "region": {
+      "dtype": "object",
+      "min": null,
+      "max": null,
+      "mean": null,
+      "unique_values": 8
+    },
+    "crop": {
+      "dtype": "object",
+      "min": null,
+      "max": null,
+      "mean": null,
+      "unique_values": 22
+    }
+  }
+}

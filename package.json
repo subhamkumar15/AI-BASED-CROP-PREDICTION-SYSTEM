@@ -1,0 +1,12 @@
+{
+  "name": "ai-crop-prediction",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI Crop Prediction & Recommendation System",
+  "scripts": {
+    "dev": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build",
+    "preview": "npm --prefix frontend run preview",
+    "backend": "cd backend && source .venv/bin/activate && uvicorn app.main:app --reload --port 8000"
+  }
+}

@@ -1,0 +1,249 @@
+{
+  "version": "1.2.0",
+  "model_type": "RandomForest-FoliarVision",
+  "classes": [
+    "Tomato_Early_Blight",
+    "Tomato_Late_Blight",
+    "Potato_Late_Blight",
+    "Corn_Common_Rust",
+    "Rice_Bacterial_Blight",
+    "Apple_Scab",
+    "Healthy_Foliage"
+  ],
+  "test_accuracy": 0.8286,
+  "disease_profiles": {
+    "Tomato_Early_Blight": {
+      "crop": "Tomato",
+      "disease_name": "Early Blight",
+      "pathogen": "Alternaria solani (Fungal)",
+      "severity": "Moderate to High",
+      "symptoms": [
+        "Concentric dark brown to black rings ('target-board' spots) on older leaves",
+        "Yellow halo encircling the necrotic lesions",
+        "Progressive defoliation starting from the lower canopy upwards",
+        "Dark, sunken stem lesions at the soil line"
+      ],
+      "causes": [
+        "High relative humidity (>80%) accompanied by warm temperatures (24-29\u00b0C)",
+        "Frequent overhead irrigation or rain splashing spores from soil onto leaves",
+        "Plant stress caused by heavy fruit load or nitrogen deficiency"
+      ],
+      "preventive_measures": [
+        "Maintain at least 60 cm row spacing to ensure maximum air circulation",
+        "Apply drip irrigation instead of overhead sprinklers to keep foliage dry",
+        "Practice 3-year crop rotation with non-solanaceous crops (avoid peppers/potatoes)",
+        "Mulch around plant bases to prevent soil-borne spore splashback"
+      ],
+      "treatment_guidance": [
+        "Biological: Spray Bacillus subtilis or Trichoderma harzianum at first symptom appearance.",
+        "Chemical: Apply Chlorothalonil 75 WP (2g/L) or Mancozeb 75 WP (2.5g/L) on a 7-10 day cycle.",
+        "Systemic: If infection is advanced, apply Difenoconazole 25 EC (1 ml/L) or Azoxystrobin."
+      ],
+      "feature_signature": {
+        "brown_ratio": 0.42,
+        "green_ratio": 0.38,
+        "edge_density": 0.28,
+        "hue_variance": 0.35
+      }
+    },
+    "Tomato_Late_Blight": {
+      "crop": "Tomato",
+      "disease_name": "Late Blight",
+      "pathogen": "Phytophthora infestans (Oomycete)",
+      "severity": "Critical",
+      "symptoms": [
+        "Large, irregular water-soaked pale green to dark brown lesions on leaves and stems",
+        "Delicate white fungal downy growth on leaf undersides during moist mornings",
+        "Rapid collapse and browning of foliage within 48 to 72 hours",
+        "Greasy, firm, brown rot on tomato fruit surfaces"
+      ],
+      "causes": [
+        "Prolonged periods of cool, wet weather (15-22\u00b0C with >90% relative humidity)",
+        "Persistent dew, fog, or frequent rainfall",
+        "Infected seed tubers or wind-blown sporangia from nearby potato fields"
+      ],
+      "preventive_measures": [
+        "Plant certified disease-free transplants and blight-resistant cultivars",
+        "Eliminate volunteer potato and tomato plants around the field perimeter",
+        "Ensure vigorous crop canopy aeration and early morning watering only",
+        "Monitor local late-blight forecast alerts"
+      ],
+      "treatment_guidance": [
+        "Preventive: Spray Copper Oxychloride 50 WP (3g/L) before heavy rainfall events.",
+        "Curative: Apply Metalaxyl 8% + Mancozeb 64% WP (Ridomil MZ @ 2.5g/L) immediately.",
+        "Alternative: Cymoxanil 8% + Mancozeb 64% WP applied at 10-day intervals."
+      ],
+      "feature_signature": {
+        "brown_ratio": 0.6,
+        "green_ratio": 0.22,
+        "edge_density": 0.4,
+        "hue_variance": 0.45
+      }
+    },
+    "Potato_Late_Blight": {
+      "crop": "Potato",
+      "disease_name": "Late Blight",
+      "pathogen": "Phytophthora infestans (Oomycete)",
+      "severity": "Critical",
+      "symptoms": [
+        "Water-soaked lesions on leaf tips and margins turning purplish-brown",
+        "White mildew growth on leaf undersides during humid conditions",
+        "Brownish-black necrotic stem lesions leading to total vine collapse",
+        "Copper-brown dry granular rot extending into potato tuber flesh"
+      ],
+      "causes": [
+        "Continuous cool night temperatures (10-15\u00b0C) and moderate day temps (18-22\u00b0C)",
+        "Leaf wetness exceeding 8 consecutive hours",
+        "Infected seed tubers or cull piles nearby"
+      ],
+      "preventive_measures": [
+        "Only sow certified seed tubers tested free of late blight",
+        "Hill up soil properly to prevent washed spores from reaching developing tubers",
+        "Destroy all cull piles and volunteer potato vines prior to sowing",
+        "Harvest only after vines have been dead for 14 days and skins are set"
+      ],
+      "treatment_guidance": [
+        "Contact: Mancozeb 75 WP (2.5 kg/ha) prophylactic spray before canopy closure.",
+        "Systemic: Cymoxanil + Mancozeb (Moximate @ 2g/L) or Dimethomorph (1g/L).",
+        "Tuber Protection: Fluopicolide + Propamocarb (Infinito @ 1.5 ml/L)."
+      ],
+      "feature_signature": {
+        "brown_ratio": 0.55,
+        "green_ratio": 0.25,
+        "edge_density": 0.36,
+        "hue_variance": 0.4
+      }
+    },
+    "Corn_Common_Rust": {
+      "crop": "Corn (Maize)",
+      "disease_name": "Common Rust",
+      "pathogen": "Puccinia sorghi (Fungal)",
+      "severity": "Moderate",
+      "symptoms": [
+        "Small, oval to elongate cinnamon-brown powdery pustules on both leaf surfaces",
+        "Pustules rupture epidermal tissue releasing rust-colored urediniospores",
+        "Severe infections cause leaves to turn chlorotic, dry up, and die prematurely",
+        "Pustules turn brownish-black late in the season (teliospores)"
+      ],
+      "causes": [
+        "Cool, humid weather (16-25\u00b0C with >95% relative humidity or heavy dew)",
+        "Windborne spore showers carried from subtropical overwintering zones"
+      ],
+      "preventive_measures": [
+        "Plant resistant corn hybrids with Rp gene-mediated resistance",
+        "Plant early in the season to avoid late-season rust spore peaks",
+        "Balanced nitrogen fertilization (avoid excessive N which promotes tender growth)"
+      ],
+      "treatment_guidance": [
+        "Foliar spray of Azoxystrobin 18.2% + Difenoconazole 11.4% SC (Amistar Top @ 1 ml/L).",
+        "Mancozeb 75% WP @ 2.5 g/L applied when first pustules appear on lower leaves.",
+        "Tebuconazole 25.9% EC @ 1 ml/L for high disease pressure."
+      ],
+      "feature_signature": {
+        "brown_ratio": 0.38,
+        "green_ratio": 0.45,
+        "edge_density": 0.35,
+        "hue_variance": 0.3
+      }
+    },
+    "Rice_Bacterial_Blight": {
+      "crop": "Rice",
+      "disease_name": "Bacterial Leaf Blight",
+      "pathogen": "Xanthomonas oryzae pv. oryzae (Bacterial)",
+      "severity": "High",
+      "symptoms": [
+        "Water-soaked to yellowish-white wavy lesions starting at leaf margins",
+        "Lesions expand rapidly along veins, turning whitish-gray with wavy margins",
+        "Bacterial ooze droplets visible on young lesions in early morning dew",
+        "'Kresek' or total seedling wilt in severe early-stage attacks"
+      ],
+      "causes": [
+        "High temperature (25-34\u00b0C) with high humidity (>70%) and strong monsoon winds",
+        "Excessive nitrogen application without potassium balance",
+        "Deep standing water in paddy fields facilitating bacterial spread"
+      ],
+      "preventive_measures": [
+        "Cultivate resistant varieties (e.g., IR64, Improved Samba Mahsuri)",
+        "Apply balanced fertilizer with split nitrogen and adequate potash (K2O)",
+        "Drain fields temporarily during early blight outbreaks to suppress bacteria",
+        "Disinfect seeds with Streptocycline (100 ppm) solution before sowing"
+      ],
+      "treatment_guidance": [
+        "Copper Oxychloride (2.5 g/L) + Streptocycline (0.1 g/L) spray at disease initiation.",
+        "Plant extract / bio-agent: Pseudomonas fluorescens foliar spray @ 5 g/L.",
+        "Avoid clipping rice seedling tips during transplanting to minimize infection entry points."
+      ],
+      "feature_signature": {
+        "brown_ratio": 0.35,
+        "green_ratio": 0.48,
+        "edge_density": 0.25,
+        "hue_variance": 0.28
+      }
+    },
+    "Apple_Scab": {
+      "crop": "Apple",
+      "disease_name": "Apple Scab",
+      "pathogen": "Venturia inaequalis (Fungal)",
+      "severity": "High",
+      "symptoms": [
+        "Velvety olive-green to dark brown circular spots on leaf surfaces",
+        "Leaves become curled, distorted, and drop prematurely in midsummer",
+        "Fruit develops circular, brown, corky, scabby lesions that crack",
+        "Deformed, stunted fruit that loses market value"
+      ],
+      "causes": [
+        "Prolonged leaf wetness (9-24 hours) with cool to mild temperatures (13-22\u00b0C)",
+        "Overwintered fungal ascospores in fallen orchard leaf litter"
+      ],
+      "preventive_measures": [
+        "Shred or disk fallen leaves in autumn or spray orchard floor with 5% urea",
+        "Prune orchard trees annually to open the canopy for rapid leaf drying",
+        "Choose scab-resistant varieties (e.g., Enterprise, Liberty, Prima)"
+      ],
+      "treatment_guidance": [
+        "Protective: Captan 50 WP (2.5 g/L) or Mancozeb 75 WP at green tip to petal fall stage.",
+        "Post-infection: Difenoconazole 25 EC (0.3 ml/L) within 72 hours of rain infection period.",
+        "Bio-control: Potassium bicarbonate or sulfur sprays for certified organic orchards."
+      ],
+      "feature_signature": {
+        "brown_ratio": 0.32,
+        "green_ratio": 0.52,
+        "edge_density": 0.24,
+        "hue_variance": 0.25
+      }
+    },
+    "Healthy_Foliage": {
+      "crop": "Healthy Crops",
+      "disease_name": "Healthy Foliage",
+      "pathogen": "None (Optimum Physiological State)",
+      "severity": "None",
+      "symptoms": [
+        "Deep, uniform emerald to forest green leaf pigmentation",
+        "No necrotic spots, chlorotic halos, or fungal pustules",
+        "Intact cuticle and vigorous leaf turgor",
+        "Normal developmental venation and healthy cellular structure"
+      ],
+      "causes": [
+        "Optimal agronomic nutrient availability and balanced soil pH",
+        "Adequate soil moisture without waterlogging or drought stress",
+        "Effective preventative integrated pest management"
+      ],
+      "preventive_measures": [
+        "Maintain current fertilizer and irrigation regime according to AGRISENSE advice",
+        "Continue periodic field scouting every 4-7 days",
+        "Keep farm equipment sanitized to prevent introduction of soil pathogens"
+      ],
+      "treatment_guidance": [
+        "No chemical intervention needed.",
+        "Maintain prophylactic biological barriers (e.g., beneficial mycorrhizae).",
+        "Ensure regular micronutrient foliar nourishment (Zinc, Boron) if needed."
+      ],
+      "feature_signature": {
+        "brown_ratio": 0.05,
+        "green_ratio": 0.85,
+        "edge_density": 0.12,
+        "hue_variance": 0.1
+      }
+    }
+  }
+}
